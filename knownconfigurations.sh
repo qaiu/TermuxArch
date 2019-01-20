@@ -16,29 +16,29 @@ KOE=1
 
 _AARCH64_() {
 	file=ArchLinuxARM-aarch64-latest.tar.gz
-	CMIRROR=mirrors.tuna.tsinghua.edu.cn/archlinuxarm
-	path=/os/
+	CMIRROR=mirrors.tuna.tsinghua.edu.cn
+	path=/archlinuxarm/os/
 	_MAKESYSTEM_ 
 }
 
 _ARMV5L_() {
 	file=ArchLinuxARM-armv5-latest.tar.gz
-	CMIRROR=mirrors.tuna.tsinghua.edu.cn/archlinuxarm
-	path=/os/
+	CMIRROR=mirrors.tuna.tsinghua.edu.cn
+	path=/archlinuxarm/os/
 	_MAKESYSTEM_ 
 }
 
 armv7lAndroid () {
 	file=ArchLinuxARM-armv7-latest.tar.gz 
-	CMIRROR=mirrors.tuna.tsinghua.edu.cn/archlinuxarm
-	path=/os/
+	CMIRROR=mirrors.tuna.tsinghua.edu.cn
+	path=/archlinuxarm/os/
 	_MAKESYSTEM_ 
 }
 
 armv7lChrome() {
 	file=ArchLinuxARM-armv7-chromebook-latest.tar.gz
-	CMIRROR=mirrors.tuna.tsinghua.edu.cn/archlinuxarm
-	path=/os/
+	CMIRROR=mirrors.tuna.tsinghua.edu.cn
+	path=/archlinuxarm/os/
 	_MAKESYSTEM_ 
 }
 
