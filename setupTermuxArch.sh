@@ -185,8 +185,8 @@ dwnl() { # Downloads TermuxArch from Github.
 		FILE[sha]="https://raw.githubusercontent.com/sdrausty/gensTermuxArch/master/setupTermuxArch.sha512"
 		FILE[tar]="https://raw.githubusercontent.com/sdrausty/gensTermuxArch/master/setupTermuxArch.tar.gz" 
 	else # get stable version from:
-		FILE[sha]="https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.sha512"
-		FILE[tar]="https://raw.githubusercontent.com/sdrausty/TermuxArch/master/setupTermuxArch.tar.gz" 
+		FILE[sha]="https://raw.githubusercontent.com/qianbaiducode/TermuxArch/master/setupTermuxArch.sha512"
+		FILE[tar]="https://raw.githubusercontent.com/qianbaiducode/TermuxArch/master/setupTermuxArch.tar.gz" 
 	fi
 	if [[ "$dm" = aria2 ]] 
 	then # use https://github.com/aria2/aria2
