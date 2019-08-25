@@ -6,6 +6,7 @@
 # _STANDARD_="function name" && STANDARD="variable name" are under construction.
 ################################################################################
 
+
 LC_TYPE=( "LANG" "LANGUAGE" "LC_ADDRESS" "LC_COLLATE" "LC_CTYPE" "LC_IDENTIFICATION" "LC_MEASUREMENT" "LC_MESSAGES" "LC_MONETARY" "LC_NAME" "LC_NUMERIC" "LC_PAPER" "LC_TELEPHONE" "LC_TIME" )
 
 _ADDADDS_() {
@@ -103,7 +104,7 @@ _DETECTSYSTEM2_() {
 
 _KERNID_() {
 	declare KID=""
-	ur="$("$PREFIX"/bin/applets/uname -r)"
+	ur="$("$PREFIX"/bin/uname -r)"
 	declare -i KERNEL_VERSION="$(echo "$ur" |awk -F'.' '{print $1}')"
 	declare -i MAJOR_REVISION="$(echo "$ur" |awk -F'.' '{print $2}')"
 	declare -- TMP="$(echo "$ur" |awk -F'.' '{print $3}')"
@@ -295,7 +296,7 @@ _MAKESYSTEM_() {
 }
 
 _MD5CHECK_() {
-	if "$PREFIX"/bin/applets/md5sum -c "$file".md5 1>/dev/null ; then
+	if "$PREFIX"/bin/md5sum -c "$file".md5 1>/dev/null ; then
 		_PRINTMD5SUCCESS_
 		printf "\\e[0;32m"
 		_PREPROOT_ ## & spinner "Unpacking" "$file…" 
@@ -326,7 +327,7 @@ _PREPROOT_() {
 	if [[ "$CPUABI" = "$CPUABIX86" ]] || [[ "$CPUABI" = "$CPUABIX86_64" ]];then
  		proot --link2symlink -0 bsdtar -xpf "$file" --strip-components 1  
 	else
- 		proot --link2symlink -0 "$PREFIX"/bin/applets/tar -xpf "$file" 
+ 		proot --link2symlink -0 "$PREFIX"/bin/tar -xpf "$file" 
 	fi
 }
 
