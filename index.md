@@ -17,4 +17,6 @@ Thank you for making this project work better and please contribute 🔆  [Cont
 
 ![Screenshot of Arch On Termux](https://raw.githubusercontent.com/sdrausty/imgsTermuxArch/master/IMG_20171019_190414.jpg)
 
+qaiu
+
 [PRoot](docs/PRoot) has more information about Linux on device with Termux.
