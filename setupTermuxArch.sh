@@ -31,8 +31,9 @@ _BSDTARIF_() {
 	fi
 }
 
+
 _CHK_() {
-	if "$PREFIX"/bin/applets/sha512sum -c termuxarchchecksum.sha512 1>/dev/null ; then
+	if "$PREFIX"/bin/sha512sum -c termuxarchchecksum.sha512 1>/dev/null ; then
  		_CHKSELF_ "$@"
 		printf "\\e[0;34m%s \\e[1;34m%s \\e[1;32m%s\\e[0m\\n" " 🕛 > 🕜" "TermuxArch $VERSIONID integrity:" "OK"
 		_LOADCONF_
@@ -55,10 +56,10 @@ _CHK_() {
 }
 
 _CHKDWN_() {
-	if "$PREFIX"/bin/applets/sha512sum -c setupTermuxArch.sha512 1>/dev/null 
+	if "$PREFIX"/bin/sha512sum -c setupTermuxArch.sha512 1>/dev/null 
 	then
 		printf "\\e[0;34m%s\\e[1;34m%s%s\\e[1;32m%s\\n\\n" " 🕛 > 🕐 " "TermuxArch download: " "OK"
-		proot --link2symlink -0 "$PREFIX"/bin/applets/tar xf setupTermuxArch.tar.gz 
+		proot --link2symlink -0 "$PREFIX"/bin/tar xf setupTermuxArch.tar.gz 
 	else
 		_PRINTSHA512SYSCHKER_
 	fi
